@@ -16,12 +16,22 @@
 
 
 
+
 // Your code here:
+let firstName = "Steven"
+let middleName = "Marcos"
+let lastName = "Webb"
+var highestTestScore = 100
+
+print( "Student name: \(firstName) \(middleName) \(lastName)")
+print("highestTestScore: \(highestTestScore)")
 
 
 // 2. The student was able to get some extra credit! This allows them to increase their score value from part 1. by 20 percent! Please create a new variable storing the updated score, using the old variable to directly calculate the new score. Ex. if I have var score = 10, a 30 % increase would 1.3 * score.
 
 // Your code here:
+var extraCreditPercentade = 20
+var newTestScore = highestTestScore
 
 
 // 3. Below is a set of class pet types allowed by the School Board. Please add one more type to the set.
@@ -32,7 +42,7 @@ var allowedClassPets: Set<String> = ["Hamster", "Guinea Pig", "Frog", "Snake"]
 
 
 // 4. Below are 3 students packaged into tuples with their name and test score. Create an array or Ints containing just the scores in descending order.
-let studentOne = (name: "Alex", score: 10)
+let studentOne = (name: "Alex", score: 10
 let studentTwo = (name: "Navdeep", score: 15)
 let studentThree = (name: "Christina", score: 20)
 
@@ -74,6 +84,13 @@ let studentThree = (name: "Christina", score: 20)
 
 // Your Code Below:
 
+func number1(student: (name: String, score: Int), threshold: Int) -> <#Return Type#> {
+    if student.score >= threshold {
+        return "pass"
+    }
+    return "fail"
+}
+
 
 
 
@@ -88,6 +105,19 @@ let studentThree = (name: "Christina", score: 20)
 // Your Code Below:
 
 
+func number2(students: [(name: String, testScore: Int)], threshold: Int -> [String] {
+    
+    var passingStudents: [String] = []
+    
+    for stud in Students {
+        
+        if stud.testScore >= threshold {
+            passingStudents.append(stud.name)
+        }
+    }
+    return passingStudents
+}
+
 
 /*
  
@@ -101,7 +131,16 @@ let studentThree = (name: "Christina", score: 20)
 
 // Your Code Below:
 
-
+func numberThree(students: [(name: String, testScore: Int)], threshold: Int) -> [(String, Int)] {
+    var passingStudents = students
+    students.filter { (name: String, testScore: Int) in
+        testScore >= threshold
+        
+    }
+    
+    student.filter(isIncluded: ((name: String, testScore: Int)) throws -> bool)
+    return passingStudents
+}
 
 
 
