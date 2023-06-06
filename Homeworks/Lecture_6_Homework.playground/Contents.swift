@@ -11,6 +11,17 @@
  */
 
 //Your code here:
+class car {
+    
+    func drive() {
+        print("I am driving")
+    }
+    
+    func unlock() {
+        print("I am unlocking the door")
+    }
+    
+}
 
 
 
@@ -24,6 +35,14 @@
  */
 
 // Your Code here:
+class truck: car {
+    func numberOf() {
+        print("There are 4 truck left in the lot")
+    }
+    func truck() -> String {
+        " this vehicle is \(car())"
+    }
+}
 
 
 
@@ -37,6 +56,18 @@
  */
 
 // Your Code here:
+protocol Vehicle {
+    
+    func drive(drive1: String)
+    
+        
+    }
+        
+      
+
+        
+    
+
 
 
 
@@ -47,6 +78,30 @@
  
  */
 // Your code here:
+protocol vehicle2 {
+    func drive()
+}
+
+class Car2 {
+    let brand: String = ""
+    var doorCount: Int = 0
+    
+    func remodel() {
+        doorCount = doorCount + 1
+        print("I added a door")
+    }
+    
+    func move() {
+        print("Move")
+    }
+}
+
+extension Car: Vehicle {
+    func drive() {
+        print("drive")
+    }
+}
+
 
 
 
@@ -57,7 +112,11 @@
  5. Create a Struct Boat that conforms to the Vehicle protocol as well
  */
 // Your code here:
-
+struct Boat: Vehicle {
+    func drive() {
+        print("Drive")
+    }
+}
 
 
 /*
@@ -65,6 +124,20 @@
  */
 // Your code here:
 
+enum Directions {
+    case north
+    case south
+    case east
+    case west
+}
+
+let path = Directions.south
+
+enum Activity {
+    case doingNothing
+    case watchingTv(show: String)
+    case doingHomework(className: String)
+}
 
 
 
@@ -75,12 +148,32 @@
 
 // Your code here:
 
+enum VehicleClass {
+    case car(car: Vehicle)
+    case boat(boat: Vehicle)
+}
+
+let vehicleCar = VehicleClass.car(car: car())
+let vehicleBoat = VehicleClass.boat(boat: boat())
+
+let vehicle = vehicleBoat
+
+switch vehicle {
+    
+case .car(car: vehicleCar):
+    print(car.drive())
+    
+case . boat(boat: vehicleBoat):
+    print(boat.drive())
+}
 
 
 // 8a. Create a Protocol automobile with at least 1 method
 
 
-
+protocol autoMobile {
+    var autoMobile: String
+}
 
 
 
