@@ -14,9 +14,11 @@ import UIKit
 // what i would like to add to this app would be a hint option
 // fixing the spacing of q and p
 
+// Todays Hello wordl starts with s
+
 
 class ViewController: UIViewController {
-    let answers = [ "after", "later", "bloke", "there", "ultra", "Steve"]
+    let answers = [ "after", "later", "smart", "there", "ultra", "steve", "kevin"]
     var answer = ""
     private var guesses: [[Character?]] = Array(
         repeating: Array(repeating: nil, count: 5),
